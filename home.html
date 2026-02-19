@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fraud Detection Home</title>
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+
+        background-image: url("{{ url_for('static', filename='bg.jpg') }}");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        color: white;
+    }
+    .navbar {
+    text-align: right;
+    padding: 20px;
+    }
+
+    .navbar a {
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #00bfff;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+    }
+
+    .navbar a:hover {
+    background-color: #007acc;
+    }
+
+    .container {
+        background: rgba(122, 184, 236, 0.6);
+        padding: 40px;
+        margin: 80px auto;
+        width: 50%;
+        border-radius: 10px;
+        text-align: center;
+        font-family :Arial, Helvetica, sans-serif;
+    }
+    .container h1 {
+    font-weight: 600;
+    font-size: 32px;
+    color: rgb(40, 44, 96);
+    }
+
+    .container p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.6;
+    }
+    </style>
+
+</head>
+<body>
+
+    <!-- Navigation Buttons -->
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/predict_page">Predict</a>
+    </div>
+
+    <!-- Page Content -->
+    <div class="container">
+        <h1>Online Payment Fraud Detection</h1>
+        <p>The objective of this application is to predict online payment fraud
+        based on transaction details. This is a classification problem where
+        the target variable is whether the transaction is fraudulent or not.
+        We use Machine Learning algorithms like Decision Tree, Random Forest,
+        Extra Trees, and XGBoost to detect fraud transactions..</p>
+    </div>
+
+</body>
+</html>

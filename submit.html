@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+
+        background-image: url("{{ url_for('static', filename='bg.jpg') }}");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        color: white;
+    }
+
+    .container {
+        background: rgba(0, 0, 0, 0.6);
+        padding: 40px;
+        margin: 80px auto;
+        width: 50%;
+        border-radius: 10px;
+        text-align: center;
+    }
+</style>
+</head>
+<body style="background-color:#9cc3d5; font-family: Arial;">
+
+    <div style="text-align:right; padding:20px;">
+        <a href="/">Home</a>
+        <a href="/predict_page" style="margin-left:20px;">Predict</a>
+    </div>
+
+    <h1>Online Payments Fraud Detection</h1>
+
+    <h2>
+        The predicted fraud for the online payment is:
+        {{ prediction_text }}
+    </h2>
+
+</body>
+</html>

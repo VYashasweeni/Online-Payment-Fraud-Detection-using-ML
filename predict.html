@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fraud Prediction</title>
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+
+        background-image: url("{{ url_for('static', filename='bg.jpg') }}");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        color: white;
+    }
+
+    .container {
+        background: rgba(0, 0, 0, 0.6);
+        padding: 40px;
+        margin: 80px auto;
+        width: 50%;
+        border-radius: 10px;
+        text-align: center;
+    }
+</style>
+
+</head>
+<body style="background-color:#9cc3d5; font-family: Arial;">
+
+    <div style="text-align:right; padding:20px;">
+        <a href="/">Home</a>
+        <a href="/predict_page" style="margin-left:20px;">Predict</a>
+    </div>
+
+    <h1>Online Payments Fraud Detection</h1>
+
+    <form action="/submit" method="post">
+
+        <label>Step:</label><br>
+        <input type="text" name="step" required><br><br>
+
+        <label>Type (Encoded Value):</label><br>
+        <input type="text" name="type" required><br><br>
+
+        <label>Amount:</label><br>
+        <input type="text" name="amount" required><br><br>
+
+        <label>Old Balance Origin:</label><br>
+        <input type="text" name="oldbalanceOrg" required><br><br>
+
+        <label>New Balance Origin:</label><br>
+        <input type="text" name="newbalanceOrig" required><br><br>
+
+        <label>Old Balance Destination:</label><br>
+        <input type="text" name="oldbalanceDest" required><br><br>
+
+        <label>New Balance Destination:</label><br>
+        <input type="text" name="newbalanceDest" required><br><br>
+
+        <label>Is Flagged Fraud (0/1):</label><br>
+        <input type="text" name="isFlaggedFraud" required><br><br>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+</body>
+</html>
